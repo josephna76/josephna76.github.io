@@ -90,3 +90,12 @@ h2 {
 .animate-on-scroll {
   opacity: 0;
 }
+
+/* Adjust the size of images within work items */
+.work-item img {
+  max-width: 100%; /* Ensures image is not wider than its container */
+  height: auto; /* Maintains the aspect ratio of the image */
+  max-height: 250px; /* Adjust this value to fit your design needs */
+  object-fit: cover; /* Ensures the image covers the area, may crop */
+  border-radius: 8px; /* Optional: Adds rounded corners to the image */
+}
