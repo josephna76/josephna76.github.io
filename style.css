@@ -1,8 +1,8 @@
 body {
   font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
 }
 
 .layout {
@@ -12,63 +12,61 @@ body {
 }
 
 .container {
+  width: 100%;
   max-width: 800px;
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.box.intro {
-  background-color: #e2e8f0;
-  padding: 15px;
+.header {
   text-align: center;
-  border-radius: 8px;
-  margin-bottom: 20px;
 }
 
-.profile {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 20px;
-}
-
-.profile-text {
-  flex-grow: 1;
-}
-
-.profile-image img {
+.profile-image {
+  display: block;
   max-width: 150px;
+  margin: 20px auto;
   border-radius: 50%;
-  border: 4px solid #e2e8f0;
 }
 
-.section {
+.intro {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.work,
+.bio,
+.skills,
+.technologies,
+.certifications {
   margin-bottom: 20px;
 }
 
-.section h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.bio-section {
-  margin-bottom: 10px;
-}
-
-.bio-year {
-  font-weight: bold;
+h1,
+h2 {
+  color: #333;
 }
 
 .button {
   display: inline-block;
-  background-color: #319795;
-  color: #ffffff;
+  background-color: #007bff;
+  color: white;
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
+  text-align: center;
+  margin: 10px 0;
 }
 
-.center {
-  text-align: center;
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .layout {
+    padding: 10px;
+  }
+
+  .container {
+    padding: 10px;
+  }
 }
