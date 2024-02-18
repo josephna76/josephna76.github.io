@@ -25,17 +25,41 @@ body {
   color: #fff;
   padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: start; /* Align items to the start for better spacing */
   align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds depth with a shadow */
+  border-radius: 5px; /* Optional: adds rounded corners */
 }
 
 .navbar a,
 .navbar button {
   color: #88ccca; /* Custom link color */
-  margin-left: 20px;
+  margin: 0 15px; /* Adjusted spacing */
   background: none;
   border: none;
   cursor: pointer;
+  text-decoration: none; /* Removes underline from links */
+  font-weight: bold; /* Makes text slightly bolder */
+}
+
+.navbar a:hover,
+.navbar button:hover {
+  color: #cae8e8; /* Lighter shade on hover for interactivity */
+  text-decoration: none; /* Ensures no underline appears on hover */
+}
+
+/* Dark Mode Toggle Button Styling */
+#dark-mode-toggle {
+  margin-left: auto; /* Pushes the button to the far right */
+  padding: 5px 10px; /* Adjust padding for better fit */
+  background-color: #444; /* Slightly different background for contrast */
+  color: #fff; /* Ensures text is white */
+  border-radius: 4px; /* Rounded corners for the button */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#dark-mode-toggle:hover {
+  background-color: #555; /* Darkens button on hover for feedback */
 }
 
 /* Container and Content Styles */
