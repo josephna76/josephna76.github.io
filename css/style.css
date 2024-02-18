@@ -14,7 +14,7 @@ button {
 
 /* Body and Global Styles */
 body {
-  background-color: #f0e7db; /* Light mode background */
+  background-color: #ffffff; /* Light mode background */
   color: #202023; /* Assuming dark text for light mode */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
@@ -122,8 +122,7 @@ h3 {
 .work-item img {
   width: 100%;
   height: auto;
-  max-height: 250px;
-  object-fit: cover;
+  object-fit: contain; /* Ensures full image is visible without cropping */
   border-radius: 8px;
 }
 
