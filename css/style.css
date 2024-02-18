@@ -1,3 +1,44 @@
+/* Reset */
+body,
+h1,
+h2,
+h3,
+p,
+a,
+button {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: "M PLUS Rounded 1c", Arial, sans-serif;
+}
+
+/* Body and Global Styles */
+body {
+  background-color: #f0e7db; /* Light mode background */
+  color: #202023; /* Assuming dark text for light mode */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #333; /* Dark background for navbar */
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a,
+.navbar button {
+  color: #88ccca; /* Custom link color */
+  margin-left: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Container and Content Styles */
 .layout {
   display: flex;
   justify-content: center;
@@ -6,23 +47,22 @@
 
 .container {
   width: 100%;
-  max-width: 800px; /* Adjust based on your preferred maximum width */
-  margin: 0 auto; /* Centers the container */
+  max-width: 800px;
+  margin: 0 auto;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for depth */
-  background-color: #ffffff; /* Optional: Sets background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
 }
 
-/* Ensure body has no padding or margin that could affect alignment */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-}
-
-.header {
+.header,
+.intro,
+.work,
+.bio,
+.skills,
+.technologies,
+.certifications {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .profile-image {
@@ -32,46 +72,34 @@ body {
   border-radius: 50%;
 }
 
-.intro {
-  text-align: center;
-  margin: 20px 0;
-}
-
-.work,
-.bio,
-.skills,
-.technologies,
-.certifications {
-  margin-bottom: 20px;
-}
-
+/* Heading Styles */
 h1,
-h2 {
+h2,
+h3 {
   color: #333;
 }
 
+.section-title {
+  text-decoration: underline;
+  font-size: 20px;
+  text-underline-offset: 6px;
+  text-decoration-color: #525252;
+  text-decoration-thickness: 4px;
+  margin-top: 3px;
+  margin-bottom: 4px;
+}
+
+/* Button Styles */
 .button {
   display: inline-block;
   background-color: #007bff;
   color: white;
   padding: 10px 20px;
-  text-decoration: none;
   border-radius: 5px;
-  text-align: center;
-  margin: 10px 0;
+  cursor: pointer;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .layout {
-    padding: 10px;
-  }
-
-  .container {
-    padding: 10px;
-  }
-}
-
+/* Animation for elements */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -87,16 +115,38 @@ h2 {
   animation: fadeIn 1s ease-out forwards;
 }
 
-/* Initially hide elements to be animated */
 .animate-on-scroll {
   opacity: 0;
 }
 
-/* Adjust the size of images within work items */
+/* Image Adjustment within Work Items */
 .work-item img {
-  max-width: 100%; /* Ensures image is not wider than its container */
-  height: auto; /* Maintains the aspect ratio of the image */
-  max-height: 250px; /* Adjust this value to fit your design needs */
-  object-fit: cover; /* Ensures the image covers the area, may crop */
-  border-radius: 8px; /* Optional: Adds rounded corners to the image */
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Dark Mode Specific Styles */
+body.dark-mode {
+  background-color: #202023;
+  color: #f0e7db;
+}
+
+.navbar.dark-mode {
+  background-color: #202023;
+}
+
+.navbar.dark-mode a,
+.navbar.dark-mode button {
+  color: #3d7aed;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .layout,
+  .container {
+    padding: 10px;
+  }
 }
