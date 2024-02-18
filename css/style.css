@@ -99,7 +99,15 @@ body {
 h1,
 h2,
 h3 {
-  color: #333;
+  color: #333; /* Default color for light mode */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Dark Mode Specific Styles */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #fff; /* Makes headings white in dark mode for visibility */
 }
 
 .section-title {
